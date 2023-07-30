@@ -8,6 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css" />
+  <!-- docsify-gitalk-with-footer plugin -->
+
+
   <!-- 主题 -->
 <!--  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css">-->
 <!--  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css">-->
@@ -47,13 +51,20 @@
                 '编辑'
         )
       ],
-      gitalk: {
-        clientID: 'd85743d5fad62b430e59',
-        clientSecret: 'f0a5698ec1cc2b6ba8c88bed339a637f4a3423f3',
-        repo: 'osallcomcn.github.io',
-        owner: 'osallcomcn',
-        admin: ['osallcomcn'],
-      }
+
+      gitalkWithFooter: {
+        footerInnerHtml: "<p>text</p>",
+        gitalkConfig: {
+          clientID: 'd85743d5fad62b430e59',
+          clientSecret: 'f0a5698ec1cc2b6ba8c88bed339a637f4a3423f3',
+          repo: 'osallcomcn.github.io',
+          owner: 'osallcomcn',
+          admin: ['osallcomcn'],
+          // facebook-like distraction free mode
+          distractionFreeMode: false,
+          labels: 'gitalk'
+        }
+      },
     }
   </script>
   <!-- Docsify v4 -->
@@ -68,11 +79,8 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 
   <!-- GitTalk评论 -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://unpkg.com/docsify-gitalk@1.0.0/dist/docsify-gitalk.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/gh/pikapikapikaori/docsify-gitalk-with-footer@latest/src/gitalkWithFooter.js"></script>
 
 </body>
 </html>
